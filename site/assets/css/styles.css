@@ -732,7 +732,11 @@ button { font: inherit; color: inherit; }
 .client--cella  { --logo-h: 21px; }
 .client--asker  { --logo-h: 50px; }
 .client--shop   { grid-auto-flow: column; gap: 14px; }
-/* Text wordmark until an official logo file is added */
+/* OneMed's file is the white version: tint it OneMed navy */
+.client--onemed { --logo-h: 34px; }
+.client--onemed img { filter: brightness(0) saturate(100%) invert(10%) sepia(64%) saturate(3600%) hue-rotate(213deg) brightness(92%); }
+.carousel.is-running .client--onemed:not(.is-focus) img { filter: brightness(0); }
+/* Text wordmark fallback */
 .client__wordmark { font-size: 1.75rem; font-weight: 600; letter-spacing: -0.02em; color: #00205b; }
 @media (max-width: 720px) { .client__wordmark { font-size: 1.05rem; } }
 .client--shop img { --logo-h: 62px; }
