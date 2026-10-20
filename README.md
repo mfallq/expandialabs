@@ -17,6 +17,22 @@ python -m http.server 5180 --directory site
 
 Then open http://localhost:5180.
 
+## Deploy
+
+Live at https://www.expandialabs.com (Loopia). Uploads go over FTPS with the
+system `curl`; nothing to install.
+
+```bash
+npm run deploy:dry
+```
+
+```bash
+npm run deploy
+```
+
+The script uploads only `site/`, never deletes remote files, and refuses any
+target other than `…/expandialabs.com/public_html`.
+
 ## Credentials
 
 FTP details for Loopia live in `.env` (git-ignored). Copy `.env.example` if it's

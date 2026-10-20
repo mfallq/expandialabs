@@ -1,0 +1,11 @@
+# Force HTTPS. Loopia terminates TLS in front of the web server, so check both
+# the HTTPS flag and the forwarded protocol to avoid a redirect loop.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# No directory listings
+Options -Indexes

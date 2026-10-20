@@ -115,7 +115,16 @@ These block final content. Placeholders are in the page until they're answered.
       on 4G.
 - [ ] Validate HTML at validator.w3.org; proofread all copy.
 
-### Phase 3: Deploy pipeline (about half a day)
+### Phase 3: Deploy pipeline ✅ live since 20 Oct 2026
+
+Done: `scripts/deploy.mjs` (system `curl`, FTPS, upload-only, path guard),
+`npm run deploy:dry` / `npm run deploy`, and `site/.htaccess` forcing HTTPS.
+The `experimentsoul` FTP user only sees the expandialabs.com folder.
+Loopia redirects the bare domain to `www`, so the canonical URL is
+<https://www.expandialabs.com/>. Remaining from the list below: caching,
+compression and security headers in `.htaccess`.
+
+Original plan:
 
 - [ ] **Loopia:** confirm expandialabs.com is on the account and find its
       folder, which Loopia uses as `/<domain>/public_html`. Confirm the

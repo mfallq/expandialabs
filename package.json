@@ -1,0 +1,12 @@
+{
+  "name": "expandialabs",
+  "private": true,
+  "description": "Expandia Labs: one-page site for Equanimity Engineering AB",
+  "scripts": {
+    "preview": "python -m http.server 5180 --bind 127.0.0.1 --directory site",
+    "deploy:list": "node scripts/deploy.mjs --list",
+    "deploy:dry": "node scripts/deploy.mjs --dry-run",
+    "deploy": "node scripts/deploy.mjs"
+  },
+  "engines": { "node": ">=20.12" }
+}
