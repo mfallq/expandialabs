@@ -30,11 +30,11 @@
 
   <!-- Inter is self-hosted: no third-party requests (GDPR) -->
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261020d">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261021">
 
   <!-- Tiny, blocking on purpose: sets .js and the saved motion preference before first paint -->
-  <script src="assets/js/early.js?v=20261020d"></script>
-  <script src="assets/js/main.js?v=20261020d" defer></script>
+  <script src="assets/js/early.js?v=20261021"></script>
+  <script src="assets/js/main.js?v=20261021" defer></script>
 
   <script type="application/ld+json">
   {
@@ -120,11 +120,7 @@
           <span class="site-nav__toggle-icon" aria-hidden="true"></span>
         </button>
         <ul class="site-nav__list" id="site-nav-list" data-nav-list>
-          <li><a href="#expand">Expand</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#cases">Case studies</a></li>
           <li><a class="button button--small" href="#contact">Let’s talk</a></li>
         </ul>
       </nav>
@@ -133,391 +129,124 @@
 
   <main id="main">
 
-    <!-- ============ Hero ============ -->
-    <section class="hero" id="top" data-hero aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="eyebrow">Expandia Labs <span aria-hidden="true">·</span> by Equanimity Engineering AB</p>
-          <h1 class="hero__title" id="hero-title">
-            <span class="hero__line">See clearly.</span>
-            <span class="hero__line">Go further.</span>
-            <span class="hero__line hero__line--accent">Stay level.</span>
-          </h1>
-          <p class="hero__lead">An AI and machine learning consultancy for companies across the EU. We build agentic AI, ML and computer vision models, and the data pipelines underneath them, from first proof of concept to production. Calm leadership, clear sight of the work, engineering you can measure.</p>
-          <div class="hero__actions">
-            <a class="button button--brass" href="#contact">Start a conversation</a>
-            <a class="button button--ghost" href="#projects">See selected work</a>
-          </div>
-        </div>
-
-        <!-- The logo's construction drawing, alive: the bubble breathes,
-             the contours expand, and it always finds its level again. -->
-        <figure class="hero__visual" aria-hidden="true">
-          <svg class="level" viewBox="0 0 800 800" fill="none" focusable="false">
-            <defs>
-              <mask id="vial-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="800" height="800">
-                <path fill="#fff" d="M150 400A329.24 329.24 0 0 1 650 400A329.24 329.24 0 0 1 150 400Z"/>
-                <rect fill="#000" x="262" y="0" width="23" height="800"/>
-                <rect fill="#000" x="515" y="0" width="23" height="800"/>
-              </mask>
-              <radialGradient id="lamp" cx="0.5" cy="0.5" r="0.5">
-                <stop offset="0" stop-color="#c6a15b" stop-opacity="0.34"/>
-                <stop offset="1" stop-color="#c6a15b" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-
-            <!-- Construction: one radius, two arcs, the marks, the axes -->
-            <g class="level__guides">
-              <circle cx="400" cy="614.24" r="329.24"/>
-              <circle cx="400" cy="185.76" r="329.24"/>
-              <path class="is-dotted" d="M24 400H776M400 196V604M118 285H682M118 515H682"/>
-              <path d="M262 256V544M285 256V544M515 256V544M538 256V544"/>
-              <circle class="is-dashed" cx="400" cy="400" r="115"/>
-              <circle class="level__pin" cx="400" cy="185.76" r="4"/>
-              <circle class="level__pin" cx="400" cy="614.24" r="4"/>
-            </g>
-
-            <!-- The vial: almond, width 2.17 H, cut by two marks of H/10 -->
-            <rect class="level__vial" width="800" height="800" mask="url(#vial-mask)"/>
-
-            <!-- Expanding contours -->
-            <g class="level__rings">
-              <circle class="ring" cx="400" cy="400" r="71.07"/>
-              <circle class="ring" cx="400" cy="400" r="71.07"/>
-              <circle class="ring" cx="400" cy="400" r="71.07"/>
-              <circle class="ring" cx="400" cy="400" r="71.07"/>
-            </g>
-
-            <!-- The bubble: diameter H / φ, with a little lamplight -->
-            <g data-bubble>
-              <circle class="level__glow" cx="400" cy="400" r="170" fill="url(#lamp)"/>
-              <circle class="level__bubble" cx="400" cy="400" r="71.07"/>
-            </g>
-
-            <!-- Dimensions -->
-            <g class="level__dims">
-              <path d="M150 636V660M650 636V660M150 648H650"/>
-              <text x="400" y="684" text-anchor="middle">W = 2.17 H</text>
-              <path d="M96 285H120M96 515H120M108 285V515"/>
-              <text x="86" y="405" text-anchor="end">H</text>
-              <path d="M441 342L512 252H556"/>
-              <text x="564" y="257">⌀ H / φ</text>
-            </g>
-          </svg>
-          <figcaption class="breath-cue"><span>Breathe in</span><span>Breathe out</span></figcaption>
-        </figure>
-      </div>
-
-      <div class="container">
-        <p class="hero__labels">
-          Agentic AI &amp; LLMs<span aria-hidden="true">·</span>Machine learning<span aria-hidden="true">·</span>Computer vision<span aria-hidden="true">·</span>Data pipelines<span aria-hidden="true">·</span>AI training
-        </p>
-      </div>
-    </section>
-
-    <!-- ============ 01 Expand ============ -->
-    <section class="section section--linen" id="expand" aria-labelledby="expand-title">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="label">01 — Expandia</p>
-          <h2 class="section-title" id="expand-title">Four ways to expand.</h2>
-          <p class="section-lead">Expandia stands for expansion: of your business, your growth, your mindset and your breath. Most engagements start with one and end up touching all four.</p>
-        </header>
-
-        <ol class="pillars" role="list">
-          <li class="pillar reveal" style="--d: 0">
-            <svg class="pillar__icon" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
-              <circle class="pillar__ring pillar__ring--open" cx="36" cy="36" r="13"/>
-              <circle class="pillar__bubble" cx="36" cy="36" r="5.5"/>
-            </svg>
-            <h3 class="pillar__title">Business</h3>
-            <p class="pillar__text">Turn AI, machine learning and your own data into capability that moves a number, not a demo that gathers dust.</p>
-            <ul class="pillar__list" role="list">
-              <li>Agentic AI, LLMs, RAG &amp; MCP</li>
-              <li>ML &amp; computer vision models</li>
-              <li>Data pipelines: Databricks, PySpark, SQL</li>
-              <li>Azure AI Foundry, ML Studio &amp; AI Search</li>
-            </ul>
-          </li>
-          <li class="pillar reveal" style="--d: 1">
-            <svg class="pillar__icon" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
-              <circle class="pillar__ring" cx="36" cy="36" r="13"/>
-              <circle class="pillar__ring pillar__ring--open" cx="36" cy="36" r="20"/>
-              <circle class="pillar__bubble" cx="36" cy="36" r="5.5"/>
-            </svg>
-            <h3 class="pillar__title">Growth</h3>
-            <p class="pillar__text">Get complex products across the line. Calm programme and product leadership when the moving parts multiply.</p>
-            <ul class="pillar__list" role="list">
-              <li>Programme &amp; project management</li>
-              <li>Product ownership, Scrum &amp; SAFe</li>
-              <li>Direct communication, no loose ends</li>
-            </ul>
-          </li>
-          <li class="pillar reveal" style="--d: 2">
-            <svg class="pillar__icon" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
-              <circle class="pillar__ring" cx="36" cy="36" r="13"/>
-              <circle class="pillar__ring" cx="36" cy="36" r="20"/>
-              <circle class="pillar__ring pillar__ring--open" cx="36" cy="36" r="27"/>
-              <circle class="pillar__bubble" cx="36" cy="36" r="5.5"/>
-            </svg>
-            <h3 class="pillar__title">Mindset</h3>
-            <p class="pillar__text">Teams that understand their tools make better calls. Hands-on training takes you from curiosity to confident, responsible use of AI.</p>
-            <ul class="pillar__list" role="list">
-              <li>AI workshops for teams &amp; leaders</li>
-              <li>Copilots, agents &amp; automation</li>
-              <li>Where AI helps, and where it doesn’t</li>
-            </ul>
-          </li>
-          <li class="pillar reveal" style="--d: 3">
-            <svg class="pillar__icon" viewBox="0 0 72 72" aria-hidden="true" focusable="false">
-              <circle class="pillar__ring" cx="36" cy="36" r="13"/>
-              <circle class="pillar__ring" cx="36" cy="36" r="20"/>
-              <circle class="pillar__ring" cx="36" cy="36" r="27"/>
-              <circle class="pillar__ring pillar__ring--open" cx="36" cy="36" r="34"/>
-              <circle class="pillar__bubble" cx="36" cy="36" r="5.5"/>
-            </svg>
-            <h3 class="pillar__title">Breath</h3>
-            <p class="pillar__text">Clarity needs space. Mindfulness and meditation for teams, in the office or out in the hills by Häckebergasjön, with a flock of sheep for company.</p>
-            <ul class="pillar__list" role="list">
-              <li>Mindfulness sessions for teams</li>
-              <li>Nature-based course with sheep</li>
-              <li>Calm leadership under pressure</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============ 02 Clients ============ -->
-    <section class="section section--linen-2 section--tight" id="clients" aria-labelledby="clients-title">
-      <div class="container section-head section-head--row reveal">
-        <div>
-          <p class="label">02 — Clients</p>
-          <h2 class="section-title" id="clients-title">Teams we’ve worked with.</h2>
-        </div>
-        <button class="motion-toggle" type="button" data-motion-toggle>
-          <span class="motion-toggle__icon" aria-hidden="true"></span>
-          <span data-motion-label>Pause motion</span>
-        </button>
-      </div>
-
-      <!-- Edit the list here; the script clones it for the endless loop.
-           Logos: site/assets/clients/ (Wikimedia Commons, asker.com, gotteftermaten.se). -->
-      <div class="carousel carousel--clients" data-carousel data-interval="3200" aria-label="Clients">
-        <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous client" data-carousel-prev><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg></button>
-        <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next client" data-carousel-next><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></button>
-        <ul class="carousel__track" role="list" data-carousel-track>
-          <li class="carousel__item client client--sony"><img src="assets/clients/sony.svg" width="1280" height="225" alt="Sony"></li>
-          <li class="carousel__item client client--asker"><img src="assets/clients/asker-healthcare-group.png" width="1704" height="406" alt="Asker Healthcare Group"></li>
-          <li class="carousel__item client client--volvo"><img src="assets/clients/volvo-cars.svg" width="800" height="110" alt="Volvo Cars"></li>
-          <li class="carousel__item client client--onemed"><img src="assets/clients/onemed.png" width="344" height="74" alt="OneMed"></li>
-          <li class="carousel__item client client--axis"><img src="assets/clients/axis-communications.svg" width="300" height="108" alt="Axis Communications"></li>
-          <li class="carousel__item client client--cella"><img src="assets/clients/cellavision.png" width="965" height="98" alt="CellaVision"></li>
-          <li class="carousel__item client client--shop"><img src="assets/clients/den-ansprakslosa-cigarraffaren.png" width="512" height="512" alt=""><span class="client__name">Den anspråkslösa<br>Cigarraffären</span></li>
-        </ul>
-      </div>
-
-      <p class="container section-note">Healthcare, medtech, automotive, camera technology and retail, from global groups to a local shop. Today working with clients across the EU.</p>
-    </section>
-
-    <!-- ============ 03 Projects ============ -->
-    <!-- Deliberately not attributed: order and wording don't map to the client list. -->
-    <section class="section section--midnight section--tight has-rings" id="projects" aria-labelledby="projects-title">
-      <svg class="rings-decor rings-decor--tr" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
+    <!-- ============ Hero: mission, services, clients ============ -->
+    <section class="hero has-rings" id="top" data-hero aria-labelledby="hero-title">
+      <svg class="rings-decor rings-decor--hero" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
         <circle cx="500" cy="500" r="60"/><circle cx="500" cy="500" r="114"/><circle cx="500" cy="500" r="168"/>
         <circle cx="500" cy="500" r="222"/><circle cx="500" cy="500" r="276"/><circle cx="500" cy="500" r="330"/>
         <circle cx="500" cy="500" r="384"/><circle cx="500" cy="500" r="438"/><circle cx="500" cy="500" r="492"/>
       </svg>
 
-      <div class="container section-head section-head--row reveal">
-        <div>
-          <p class="label">03 — Projects</p>
-          <h2 class="section-title" id="projects-title">Selected expeditions.</h2>
-          <p class="section-lead">The most recent work: agentic AI, machine learning, computer vision and data pipelines, plus the camera and safety systems where it all started. Details on request.</p>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Expandia Labs</p>
+          <h1 class="hero__title" id="hero-title">We help companies across Europe turn AI and data into <span class="hero__accent">measurable results.</span></h1>
         </div>
-        <button class="motion-toggle" type="button" data-motion-toggle>
-          <span class="motion-toggle__icon" aria-hidden="true"></span>
-          <span data-motion-label>Pause motion</span>
-        </button>
+
+        <div class="hero__services">
+          <p class="hero__services-label">Experts in</p>
+          <ul class="services" role="list">
+            <li><span class="services__name">Agentic AI &amp; LLMs</span><span class="services__hint">RAG · MCP · Azure AI</span></li>
+            <li><span class="services__name">Machine learning</span><span class="services__hint">PyTorch · Azure ML</span></li>
+            <li><span class="services__name">Computer vision</span><span class="services__hint">Medical &amp; camera imaging</span></li>
+            <li><span class="services__name">Data pipelines</span><span class="services__hint">Databricks · PySpark · SQL</span></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="carousel carousel--projects" data-carousel data-interval="4400" aria-label="Projects">
-        <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous project" data-carousel-prev><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg></button>
-        <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next project" data-carousel-next><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></button>
-        <ul class="carousel__track" role="list" data-carousel-track>
-          <li class="carousel__item project">
-            <article class="project-card">
-              <p class="project-card__domain">Agentic AI · Data</p>
-              <h3 class="project-card__title">AI pipelines for product data</h3>
-              <p class="project-card__text">Agentic and LLM pipelines that enrich and structure large product catalogues, with retrieval over a knowledge base and an MCP server connection.</p>
-              <ul class="tags" role="list"><li>LLM &amp; RAG</li><li>Azure AI Search</li><li>MCP</li><li>Databricks</li></ul>
-            </article>
-          </li>
-          <li class="carousel__item project">
-            <article class="project-card">
-              <p class="project-card__domain">Medtech · Computer vision</p>
-              <h3 class="project-card__title">Blood cell segmentation</h3>
-              <p class="project-card__text">Imaging algorithms and generative models for ML-based digital microscopes: segmenting and classifying red and white blood cells in large image sets.</p>
-              <ul class="tags" role="list"><li>PyTorch</li><li>GANs</li><li>OpenCV</li></ul>
-            </article>
-          </li>
-          <li class="carousel__item project">
-            <article class="project-card">
-              <p class="project-card__domain">Automotive · Platforms</p>
-              <h3 class="project-card__title">Camera SDK for self-driving</h3>
-              <p class="project-card__text">Product owner and technical lead for camera-module SDK releases on NVIDIA Drive, NVIDIA Jetson Orin and TI TDA4, with stakeholders in Japan.</p>
-              <ul class="tags" role="list"><li>Product owner</li><li>NVIDIA Jetson</li><li>GitLab CI/CD</li></ul>
-            </article>
-          </li>
-          <li class="carousel__item project">
-            <article class="project-card">
-              <p class="project-card__domain">Data · ETL</p>
-              <h3 class="project-card__title">Data pipelines at scale</h3>
-              <p class="project-card__text">ETL and OLAP pipelines in Databricks and PySpark that turn scattered source data into clean, queryable models for analytics and AI.</p>
-              <ul class="tags" role="list"><li>PySpark</li><li>SQL</li><li>ETL / OLAP</li></ul>
-            </article>
-          </li>
-          <li class="carousel__item project">
-            <article class="project-card">
-              <p class="project-card__domain">Medtech · Machine learning</p>
-              <h3 class="project-card__title">Wound severity from photos</h3>
-              <p class="project-card__text">A proof of concept that scores wound severity from medical images with a regression model, from labelling to trained model.</p>
-              <ul class="tags" role="list"><li>Azure ML Studio</li><li>Label Studio</li><li>Python</li></ul>
-            </article>
-          </li>
-          <li class="carousel__item project">
-            <article class="project-card">
-              <p class="project-card__domain">Security cameras · R&amp;D</p>
-              <h3 class="project-card__title">Thermal &amp; dome camera imaging</h3>
-              <p class="project-card__text">Owned image quality across the imaging pipeline (sensor, optics, firmware, video) and led thermal-camera R&amp;D as Scrum Master for three teams.</p>
-              <ul class="tags" role="list"><li>C++</li><li>Python</li><li>Image quality</li></ul>
-            </article>
-          </li>
-          <li class="carousel__item project">
-            <article class="project-card">
-              <p class="project-card__domain">Agentic AI · Web</p>
-              <h3 class="project-card__title">AI document extraction app</h3>
-              <p class="project-card__text">A C# web app, built agentically, that extracts structured data from documents with Azure Content Understanding, plus a Teams chatbot.</p>
-              <ul class="tags" role="list"><li>C#</li><li>AI Foundry</li><li>Teams bot</li></ul>
-            </article>
-          </li>
-          <li class="carousel__item project">
-            <article class="project-card">
-              <p class="project-card__domain">Automotive · Active safety</p>
-              <h3 class="project-card__title">Collision avoidance</h3>
-              <p class="project-card__text">Verification lead for lane keeping and rear radar functions under ISO 26262, as team lead and SAFe Scrum Master. Award-winning work.</p>
-              <ul class="tags" role="list"><li>ISO 26262</li><li>ADAS</li><li>Matlab</li></ul>
-            </article>
-          </li>
+      <div class="container hero__clients">
+        <p class="hero__clients-label">Trusted by</p>
+        <ul class="logos" role="list">
+          <li class="logos__item" style="--h: 20px"><img src="assets/clients/sony.svg" width="1280" height="225" alt="Sony"></li>
+          <li class="logos__item" style="--h: 34px"><img src="assets/clients/asker-healthcare-group.png" width="1704" height="406" alt="Asker Healthcare Group"></li>
+          <li class="logos__item" style="--h: 17px"><img src="assets/clients/volvo-cars.svg" width="800" height="110" alt="Volvo Cars"></li>
+          <li class="logos__item" style="--h: 22px"><img src="assets/clients/onemed.png" width="344" height="74" alt="OneMed"></li>
+          <li class="logos__item" style="--h: 40px"><img src="assets/clients/axis-communications.svg" width="300" height="108" alt="Axis Communications"></li>
+          <li class="logos__item" style="--h: 14px"><img src="assets/clients/cellavision.png" width="965" height="98" alt="CellaVision"></li>
+          <li class="logos__item logos__item--shop" style="--h: 38px"><img src="assets/clients/den-ansprakslosa-cigarraffaren.png" width="512" height="512" alt=""><span>Den anspråkslösa<br>Cigarraffären</span></li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ 04 Newest project ============ -->
-    <section class="section section--linen" id="work" aria-labelledby="work-title">
+    <!-- ============ Case studies ============
+         Three logo tabs. The active logo fills up like a progress bar; when it
+         is full, the next case opens. Click a logo to jump, or pause. -->
+    <section class="section section--linen" id="cases" aria-labelledby="cases-title">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="label">04 — Newest project</p>
-          <h2 class="section-title" id="work-title">gotteftermaten.se</h2>
-          <p class="section-lead">Website and e-shop for Den anspråkslösa Cigarraffären, Malmö’s cigar and pipe shop since 2007. Built with agentic AI: Claude worked alongside me as a coding agent.</p>
-        </header>
+        <h2 class="section-title cases__title reveal" id="cases-title">Case studies</h2>
 
-        <div class="feature">
-          <figure class="feature__visual showcase reveal">
-            <a href="https://www.gotteftermaten.se" target="_blank" rel="noopener" class="browser" aria-label="Open gotteftermaten.se in a new tab">
-              <span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">gotteftermaten.se</span></span>
-              <img src="assets/work/gotteftermaten-desktop.jpg" width="2160" height="1350" loading="lazy" decoding="async" alt="The gotteftermaten.se home page on desktop: shop header with categories and search, and a Staff Favorites row of products with prices">
-            </a>
-            <div class="phone">
-              <img src="assets/work/gotteftermaten-mobile.jpg" width="780" height="1688" loading="lazy" decoding="async" alt="The same shop on a phone, with a compact header, menu, search, account and cart buttons">
+        <div class="cases reveal" data-cases data-duration="10000">
+          <div class="cases__bar">
+            <div class="cases__tabs" role="tablist" aria-label="Case studies">
+              <button class="case-tab" type="button" role="tab" id="tab-asker" aria-controls="case-asker" aria-selected="true" aria-label="Asker Healthcare Group" style="--h: 48px">
+                <span class="case-tab__logo" aria-hidden="true">
+                  <img class="case-tab__base" src="assets/clients/asker-healthcare-group.png" width="1704" height="406" alt="">
+                  <img class="case-tab__fill" src="assets/clients/asker-healthcare-group.png" width="1704" height="406" alt="">
+                </span>
+                <span class="case-tab__progress" aria-hidden="true"></span>
+              </button>
+              <button class="case-tab" type="button" role="tab" id="tab-sony" aria-controls="case-sony" aria-selected="false" tabindex="-1" aria-label="Sony" style="--h: 30px">
+                <span class="case-tab__logo" aria-hidden="true">
+                  <img class="case-tab__base" src="assets/clients/sony.svg" width="1280" height="225" alt="">
+                  <img class="case-tab__fill" src="assets/clients/sony.svg" width="1280" height="225" alt="">
+                </span>
+                <span class="case-tab__progress" aria-hidden="true"></span>
+              </button>
+              <button class="case-tab" type="button" role="tab" id="tab-cellavision" aria-controls="case-cellavision" aria-selected="false" tabindex="-1" aria-label="CellaVision" style="--h: 21px">
+                <span class="case-tab__logo" aria-hidden="true">
+                  <img class="case-tab__base" src="assets/clients/cellavision.png" width="965" height="98" alt="">
+                  <img class="case-tab__fill" src="assets/clients/cellavision.png" width="965" height="98" alt="">
+                </span>
+                <span class="case-tab__progress" aria-hidden="true"></span>
+              </button>
             </div>
-          </figure>
+            <button class="cases__pause" type="button" data-cases-pause>
+              <span class="cases__pause-icon" aria-hidden="true"></span>
+              <span data-cases-pause-label>Pause</span>
+            </button>
+          </div>
 
-          <div class="feature__body reveal" style="--d: 1">
-            <ol class="stack" role="list">
-              <li class="stack__item">
-                <p class="stack__name">Loopia <span class="stack__role">Hosting</span></p>
-                <p class="stack__text">The public website, its domain and hosting, set up on Loopia.</p>
-              </li>
-              <li class="stack__item">
-                <p class="stack__name">PrestaShop <span class="stack__role">E-shop</span></p>
-                <p class="stack__text">Catalogue, cart, customer accounts, wishlists and stock status for a large range of brands.</p>
-              </li>
-              <li class="stack__item">
-                <p class="stack__name">Svea <span class="stack__role">Payments</span></p>
-                <p class="stack__text">Svea payment integration in the checkout, with Visa and Mastercard.</p>
-              </li>
-              <li class="stack__item">
-                <p class="stack__name">Claude <span class="stack__role">Agentic AI</span></p>
-                <p class="stack__text">Built hands-on with Claude, Anthropic’s AI, working as a coding agent: the same way of working we teach teams.</p>
-              </li>
-            </ol>
-            <ul class="chips" role="list">
-              <li>Age gate (18+)</li>
-              <li>Cookie consent</li>
-              <li>Swedish-language store</li>
-              <li>Built with agentic AI</li>
+          <article class="case" role="tabpanel" id="case-asker" aria-labelledby="tab-asker">
+            <div class="case__story">
+              <p class="case__meta">Asker Healthcare Group · Data scientist · 2025–today</p>
+              <h3 class="case__title">AI agents for medical product data</h3>
+              <p class="case__text">Agentic AI pipelines for medical product data, plus a C# web app that extracts data with AI.</p>
+              <ul class="tags" role="list"><li>Databricks</li><li>PySpark</li><li>Azure AI Search</li><li>RAG</li><li>MCP</li><li>C#</li></ul>
+            </div>
+            <ul class="case__stats" role="list">
+              <li><strong>2</strong><span>AI solutions built: agentic data pipelines and an AI extraction app</span></li>
             </ul>
-            <blockquote class="quote feature__quote">
-              <p>“Super attentive to all of our requests, speedily delivering everything we needed. Highly recommend!”</p>
-              <footer>Dave, Den anspråkslösa Cigarraffären</footer>
-            </blockquote>
-            <p class="feature__link">
-              <a class="link-arrow" href="https://www.gotteftermaten.se" target="_blank" rel="noopener">Visit gotteftermaten.se <span aria-hidden="true">↗</span></a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+          </article>
 
-    <!-- ============ 05 About ============ -->
-    <section class="section section--linen-2" id="about" aria-labelledby="about-title">
-      <div class="container about">
-        <div class="about__visual reveal" aria-hidden="true">
-          <div class="card card--back">
-            <img src="assets/brand/equanimity-symbol-reverse.svg" width="448" height="232" alt="">
-          </div>
-          <div class="card card--front">
-            <img class="card__logo" src="assets/brand/equanimity-horizontal-primary.svg" width="1411" height="320" alt="">
-            <div class="card__row">
-              <p class="card__name"><strong>Marcus Fallqvist</strong><span>Founder</span></p>
-              <p class="card__meta">Equanimity Engineering AB<br>Sweden</p>
+          <article class="case" role="tabpanel" id="case-sony" aria-labelledby="tab-sony">
+            <div class="case__story">
+              <p class="case__meta">Sony Europe · Product owner · 2023–2024</p>
+              <h3 class="case__title">Sony’s car-camera SDK on three self-driving platforms</h3>
+              <p class="case__text">Led the release of camera-module SDK integrations and the developer portal that delivers them, working with teams in Japan.</p>
+              <ul class="tags" role="list"><li>NVIDIA Drive</li><li>Jetson Orin</li><li>TI TDA4</li><li>GitLab CI/CD</li><li>AsciiDoc</li></ul>
             </div>
-          </div>
-        </div>
+            <ul class="case__stats" role="list">
+              <li><strong>3</strong><span>self-driving platforms supported: NVIDIA Drive, Jetson Orin, TI TDA4</span></li>
+              <li><strong>1</strong><span>developer portal for the SDK, docs, support and tutorials</span></li>
+            </ul>
+          </article>
 
-        <div class="about__body reveal" style="--d: 1">
-          <p class="label">05 — About</p>
-          <h2 class="section-title" id="about-title">Hi, I’m Marcus.</h2>
-          <p class="section-lead">I founded Equanimity Engineering in 2024 to do the work I like best: helping teams see a hard problem clearly, then building their way through it, calmly.</p>
-          <p>Ten years in, my work has moved from cameras and cars to AI. Today I build agentic AI and LLM solutions, ML and computer vision models, and the data pipelines that feed them, mostly for healthcare and medtech. Before that: camera R&amp;D and image quality, an automotive camera SDK on NVIDIA platforms, and collision-avoidance verification in cars.</p>
-          <p>I lead with direct communication and a habit of pulling on loose ends until they’re tied, and I teach what I build so it stays with your team. Away from the keyboard: Vipassana, a year studying in Seoul, mentoring teenagers in Malmö, and a mindfulness course with a flock of sheep.</p>
-
-          <dl class="facts">
-            <div><dt>Based in</dt><dd>Malmö, the Øresund region, and remote</dd></div>
-            <div><dt>Focus</dt><dd>Agentic AI &amp; LLMs, machine learning, computer vision, data pipelines, AI training</dd></div>
-            <div><dt>Stack</dt><dd>Python, C#, C++, PyTorch, OpenCV, Databricks, PySpark, SQL, Azure AI Foundry, ML Studio &amp; AI Search</dd></div>
-            <div><dt>Methods</dt><dd>Product ownership, Scrum, SAFe, ISO 26262, MLOps</dd></div>
-            <div><dt>Languages</dt><dd>Swedish, English, basic Korean</dd></div>
-            <div><dt>Education</dt><dd>MSc, Linköping University · Sogang University, Seoul</dd></div>
-          </dl>
-
-          <!-- Short excerpts from LinkedIn recommendations, approved for use. -->
-          <div class="quotes">
-            <blockquote class="quote">
-              <p>“A highly proactive manager who makes things happen.”</p>
-              <footer>Peter N., engineering colleague</footer>
-            </blockquote>
-            <blockquote class="quote">
-              <p>“An explorative mindset … a fast learner who thrived in the breadth and complexity.”</p>
-              <footer>Jonna S. W., development manager</footer>
-            </blockquote>
-          </div>
+          <article class="case" role="tabpanel" id="case-cellavision" aria-labelledby="tab-cellavision">
+            <div class="case__story">
+              <p class="case__meta">CellaVision · ML engineer · 2024–2025</p>
+              <h3 class="case__title">Teaching a new microscope to see blood cells</h3>
+              <p class="case__text">Imaging algorithms and generative models for a Fourier ptychographic microscope, segmenting blood cells in large image sets.</p>
+              <ul class="tags" role="list"><li>PyTorch</li><li>GANs</li><li>OpenCV</li><li>Python</li></ul>
+            </div>
+            <ul class="case__stats" role="list">
+              <li><strong>3</strong><span>classes segmented: red cells, white cells and background</span></li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ 06 Contact ============ -->
+    <!-- ============ Contact ============ -->
     <section class="section section--midnight has-rings" id="contact" aria-labelledby="contact-title">
       <svg class="rings-decor rings-decor--bl" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
         <circle cx="500" cy="500" r="60"/><circle cx="500" cy="500" r="114"/><circle cx="500" cy="500" r="168"/>
@@ -527,15 +256,15 @@
 
       <div class="container contact">
         <div class="reveal">
-          <p class="label">06 — Contact</p>
+          <p class="label">Contact</p>
           <h2 class="section-title section-title--xl" id="contact-title">What’s your biggest pain point today?</h2>
-          <p class="section-lead">Which boring task eats your week? Which idea deserves a proper try? Tell us, and you’ll get a calm, honest answer about whether AI, computer vision or a better process can help.</p>
+          <p class="section-lead">Tell us which task eats your week. You’ll get a calm, honest answer on whether AI, ML or better data can help.</p>
         </div>
 
         <ol class="steps" role="list">
-          <li class="reveal" style="--d: 0"><span class="steps__n">01</span><h3>Talk</h3><p>Thirty minutes, no slides. You describe the terrain.</p></li>
-          <li class="reveal" style="--d: 1"><span class="steps__n">02</span><h3>Map</h3><p>A one-page route: options, effort and risks, in plain words.</p></li>
-          <li class="reveal" style="--d: 2"><span class="steps__n">03</span><h3>Expand</h3><p>Build, teach, hand over. The capability stays with you.</p></li>
+          <li class="reveal" style="--d: 0"><h3>Talk</h3><p>Thirty minutes, no slides.</p></li>
+          <li class="reveal" style="--d: 1"><h3>Map</h3><p>A one-page plan: options, effort, risks.</p></li>
+          <li class="reveal" style="--d: 2"><h3>Deliver</h3><p>Build, measure, hand over.</p></li>
         </ol>
 
         <div class="contact__actions">
@@ -543,8 +272,7 @@
           <a class="button button--ghost button--large" href="https://www.linkedin.com/in/mfallq/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
 
-        <p class="contact__reach">Working remotely with companies across the EU, in English or Swedish. On-site in Malmö, Copenhagen and the Øresund region; elsewhere in Europe by arrangement.</p>
-        <address class="contact__address">Equanimity Engineering AB · Västra Kanalgatan 5 · 211 41 Malmö · Sweden</address>
+        <p class="contact__reach">Remote across the EU, in English or Swedish. On-site in Malmö and Copenhagen.</p>
       </div>
     </section>
   </main>
@@ -555,13 +283,13 @@
       <img class="site-footer__logo" src="assets/brand/equanimity-horizontal-reverse.svg" width="1411" height="320" alt="Equanimity Engineering">
       <p class="site-footer__tagline">See clearly. <span>Stay level.</span></p>
       <div class="site-footer__bottom">
-        <p class="site-footer__legal">© <span data-year>2026</span> Equanimity Engineering AB · Org.nr 559467-0068 · Expandia Labs</p>
+        <address class="site-footer__address">Equanimity Engineering AB · Västra Kanalgatan 5 · 211 41 Malmö · Sweden<br>Org.nr 559467-0068 · <a href="mailto:Marcus@expandialabs.com">Marcus@expandialabs.com</a></address>
         <ul class="site-footer__links" role="list">
           <li><a href="https://www.linkedin.com/company/equanimity-engineering/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><button type="button" data-motion-toggle><span data-motion-label>Pause motion</span></button></li>
           <li><a href="#top">Back to top ↑</a></li>
         </ul>
       </div>
+      <p class="site-footer__legal">© <span data-year>2026</span> Equanimity Engineering AB · Expandia Labs</p>
     </div>
   </footer>
 </body>

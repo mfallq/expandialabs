@@ -18,28 +18,12 @@ hosted on Loopia. Brand reasoning: [BRAND.md](BRAND.md).
 
 ### Page structure
 
-| # | Section | Purpose |
-|---|---|---|
-| | Hero | "See clearly. Go further. Stay level." The logo's construction drawing, breathing |
-| 01 | Expand | The four expansions: Business, Growth, Mindset, Breath |
-| 02 | Clients | Full-width carousel of real client logos: two in focus, in colour; the rest turn away, grey and faded |
-| 03 | Projects | Full-width carousel of project cards, two in focus (**not attributed**) |
-| 04 | Newest project | gotteftermaten.se, built with agentic AI (Claude): real desktop and phone screenshots; Loopia website, PrestaShop e-shop, Svea payments |
-| 05 | About | Marcus, the business cards from the deck, facts, two short testimonials |
-| 06 | Contact | "What's your biggest pain point today?" Talk, Map, Expand |
-
-**Focus carousels.** Each section is one full-width row. The two middle items
-are flat and in focus; the others turn away and fade the further out they are.
-Every few seconds the row glides one step to the right. Visitors can also use
-the arrows, click a faded item, or press the arrow keys. On phones, clients
-keep two small logo tiles in focus and projects show one card. The rows hold
-while hovered or focused, while off screen, and when motion is paused; with
-reduced motion they become static lists.
-
-**Keeping projects unattributed.** The two carousels step at different
-intervals (3.2 s and 4.4 s), hold different numbers of items, and are ordered
-so no project lines up with its client. Project copy names domains
-("Automotive · Imaging"), never companies.
+| Section | Purpose |
+|---|---|
+| Hero | Mission ("We help companies across Europe turn AI and data into measurable results."), the four service areas, and every client logo |
+| Case studies | Asker, Sony and CellaVision as logo tabs; the active logo fills like a progress bar, then the next case opens. Click to jump, Pause to stop. Each case leads with quantified results |
+| Contact | "What's your biggest pain point today?" Talk, Map, Deliver; email and LinkedIn |
+| Footer | Address, org.nr, email, LinkedIn |
 
 ## Decisions
 

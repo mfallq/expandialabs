@@ -1,3 +1,2 @@
-// Runs before first paint: enables JS-only styles and restores the motion preference.
+// Runs before first paint: enables the JS-only styles (scroll reveals, case-study tabs).
 document.documentElement.classList.add('js');
-try { if (localStorage.getItem('motion') === 'paused') document.documentElement.classList.add('motion-paused'); } catch (e) { /* private mode */ }
