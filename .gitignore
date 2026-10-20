@@ -1,0 +1,16 @@
+# Secrets: FTP credentials live here and must never be committed
+.env
+.env.*
+!.env.example
+
+# Tooling
+node_modules/
+.cache/
+dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
