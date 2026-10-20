@@ -4,6 +4,24 @@
    Inter Display. Reasoning lives in docs/BRAND.md.
    ========================================================================== */
 
+/* ---------- Fonts: Inter (SIL OFL), self-hosted, variable weight + optical size ---------- */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("../fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 /* ---------- Tokens ---------- */
 :root {
   --midnight: #0e1f33;
@@ -714,6 +732,9 @@ button { font: inherit; color: inherit; }
 .client--cella  { --logo-h: 21px; }
 .client--asker  { --logo-h: 50px; }
 .client--shop   { grid-auto-flow: column; gap: 14px; }
+/* Text wordmark until an official logo file is added */
+.client__wordmark { font-size: 1.75rem; font-weight: 600; letter-spacing: -0.02em; color: #00205b; }
+@media (max-width: 720px) { .client__wordmark { font-size: 1.05rem; } }
 .client--shop img { --logo-h: 62px; }
 .client__name {
   font-size: 0.8125rem;
@@ -918,6 +939,7 @@ button { font: inherit; color: inherit; }
   font-size: 0.8125rem;
   color: var(--ink-muted);
 }
+.feature__quote { margin-top: 24px; background: var(--linen-2); }
 .feature__link { margin-top: 28px; }
 
 @media (max-width: 960px) {

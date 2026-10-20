@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Expandia Labs | Equanimity Engineering AB</title>
-  <meta name="description" content="Expandia Labs is the studio of Equanimity Engineering AB in Malmö: calm, senior engineering in AI, computer vision and programme leadership, plus AI training and mindfulness for teams.">
+  <meta name="description" content="Equanimity Engineering AB (Expandia Labs), Malmö: AI and machine learning consultancy. Agentic AI, LLMs and RAG, computer vision, ML models and data pipelines, plus AI training for teams.">
   <meta name="theme-color" content="#0e1f33">
   <link rel="canonical" href="https://www.expandialabs.com/">
 
@@ -12,25 +12,22 @@
   <meta property="og:url" content="https://www.expandialabs.com/">
   <meta property="og:site_name" content="Expandia Labs">
   <meta property="og:title" content="Expandia Labs: See clearly. Go further. Stay level.">
-  <meta property="og:description" content="Calm, senior engineering in AI, computer vision and programme leadership, by Equanimity Engineering AB, Malmö.">
-  <!-- TODO: replace with a 1200x630 og-image (see docs/PLAN.md) -->
-  <meta property="og:image" content="https://www.expandialabs.com/assets/brand/app-icon-1024.png">
+  <meta property="og:description" content="AI and machine learning consultancy in Malmö: agentic AI, computer vision, ML models and data pipelines."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://www.expandialabs.com/assets/og-image.png">
 
   <link rel="icon" href="assets/brand/favicon-32.svg" type="image/svg+xml">
   <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/brand/app-icon-1024.png">
 
-  <!-- Prototype loads Inter from Google Fonts. Production self-hosts it (GDPR, see docs/PLAN.md). -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..600&amp;display=swap">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261020">
+  <!-- Inter is self-hosted: no third-party requests (GDPR) -->
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261020b">
 
   <script>
     document.documentElement.classList.add('js');
     try { if (localStorage.getItem('motion') === 'paused') document.documentElement.classList.add('motion-paused'); } catch (e) {}
   </script>
-  <script src="assets/js/main.js?v=20261020" defer></script>
+  <script src="assets/js/main.js?v=20261020b" defer></script>
 
   <script type="application/ld+json">
   {
@@ -51,7 +48,7 @@
       "addressCountry": "SE"
     },
     "areaServed": ["SE", "DK"],
-    "knowsAbout": ["Computer vision", "Machine learning", "AI training", "Programme management", "Scrum", "Product ownership", "Azure", "Mindfulness"],
+    "knowsAbout": ["Agentic AI", "Large language models", "Retrieval-augmented generation", "Machine learning", "Computer vision", "Data pipelines", "Databricks", "Azure AI", "AI training", "Product ownership"],
     "email": "Marcus@expandialabs.com",
     "identifier": { "@type": "PropertyValue", "propertyID": "Organisationsnummer", "value": "559467-0068" },
     "sameAs": ["https://www.linkedin.com/company/equanimity-engineering/"]
@@ -97,7 +94,7 @@
             <span class="hero__line">Go further.</span>
             <span class="hero__line hero__line--accent">Stay level.</span>
           </h1>
-          <p class="hero__lead">We help teams expand their business with AI and computer vision, with calm leadership, clear sight of the work, and engineering you can measure.</p>
+          <p class="hero__lead">An AI and machine learning consultancy. We build agentic AI, ML and computer vision models, and the data pipelines underneath them, from first proof of concept to production. Calm leadership, clear sight of the work, engineering you can measure.</p>
           <div class="hero__actions">
             <a class="button button--brass" href="#contact">Start a conversation</a>
             <a class="button button--ghost" href="#projects">See selected work</a>
@@ -164,7 +161,7 @@
 
       <div class="container">
         <p class="hero__labels">
-          Computer vision<span aria-hidden="true">·</span>Machine learning<span aria-hidden="true">·</span>Programme leadership<span aria-hidden="true">·</span>AI training<span aria-hidden="true">·</span>Mindfulness
+          Agentic AI &amp; LLMs<span aria-hidden="true">·</span>Machine learning<span aria-hidden="true">·</span>Computer vision<span aria-hidden="true">·</span>Data pipelines<span aria-hidden="true">·</span>AI training
         </p>
       </div>
     </section>
@@ -185,11 +182,12 @@
               <circle class="pillar__bubble" cx="36" cy="36" r="5.5"/>
             </svg>
             <h3 class="pillar__title">Business</h3>
-            <p class="pillar__text">Turn AI and computer vision into capability that moves a number, not a demo that gathers dust.</p>
+            <p class="pillar__text">Turn AI, machine learning and your own data into capability that moves a number, not a demo that gathers dust.</p>
             <ul class="pillar__list" role="list">
-              <li>Machine learning, end to end</li>
-              <li>Computer vision &amp; image analysis</li>
-              <li>Azure, MLOps &amp; DevOps</li>
+              <li>Agentic AI, LLMs, RAG &amp; MCP</li>
+              <li>ML &amp; computer vision models</li>
+              <li>Data pipelines: Databricks, PySpark, SQL</li>
+              <li>Azure AI Foundry, ML Studio &amp; AI Search</li>
             </ul>
           </li>
           <li class="pillar reveal" style="--d: 1">
@@ -263,13 +261,14 @@
           <li class="carousel__item client client--sony"><img src="assets/clients/sony.svg" width="1280" height="225" alt="Sony"></li>
           <li class="carousel__item client client--asker"><img src="assets/clients/asker-healthcare-group.png" width="1704" height="406" alt="Asker Healthcare Group"></li>
           <li class="carousel__item client client--volvo"><img src="assets/clients/volvo-cars.svg" width="800" height="110" alt="Volvo Cars"></li>
+          <li class="carousel__item client client--text"><span class="client__wordmark">OneMed</span></li>
           <li class="carousel__item client client--axis"><img src="assets/clients/axis-communications.svg" width="300" height="108" alt="Axis Communications"></li>
           <li class="carousel__item client client--cella"><img src="assets/clients/cellavision.png" width="965" height="98" alt="CellaVision"></li>
           <li class="carousel__item client client--shop"><img src="assets/clients/den-ansprakslosa-cigarraffaren.png" width="512" height="512" alt=""><span class="client__name">Den anspråkslösa<br>Cigarraffären</span></li>
         </ul>
       </div>
 
-      <p class="container section-note">Automotive, imaging, medtech, healthcare and retail, from global groups to a local shop.</p>
+      <p class="container section-note">Healthcare, medtech, automotive, camera technology and retail, from global groups to a local shop.</p>
     </section>
 
     <!-- ============ 03 Projects ============ -->
@@ -285,7 +284,7 @@
         <div>
           <p class="label">03 — Projects</p>
           <h2 class="section-title" id="projects-title">Selected expeditions.</h2>
-          <p class="section-lead">Sensors, safety systems, microscopes, models, and the occasional flock of sheep. A cross-section of the work; details on request.</p>
+          <p class="section-lead">The most recent work: agentic AI, machine learning, computer vision and data pipelines, plus the camera and safety systems where it all started. Details on request.</p>
         </div>
         <button class="motion-toggle" type="button" data-motion-toggle>
           <span class="motion-toggle__icon" aria-hidden="true"></span>
@@ -299,42 +298,66 @@
         <ul class="carousel__track" role="list" data-carousel-track>
           <li class="carousel__item project">
             <article class="project-card">
-              <p class="project-card__domain">Medtech · Optics</p>
-              <h3 class="project-card__title">Computational microscopy</h3>
-              <p class="project-card__text">Fourier ptychography, image-quality assessment and statistics for next-generation diagnostic imaging.</p>
-              <ul class="tags" role="list"><li>Python</li><li>Image processing</li><li>MLOps</li></ul>
+              <p class="project-card__domain">Agentic AI · Data</p>
+              <h3 class="project-card__title">AI pipelines for product data</h3>
+              <p class="project-card__text">Agentic and LLM pipelines that enrich and structure large product catalogues, with retrieval over a knowledge base and an MCP server connection.</p>
+              <ul class="tags" role="list"><li>LLM &amp; RAG</li><li>Azure AI Search</li><li>MCP</li><li>Databricks</li></ul>
             </article>
           </li>
           <li class="carousel__item project">
             <article class="project-card">
-              <p class="project-card__domain">Mindfulness</p>
-              <h3 class="project-card__title">Meditation with sheep</h3>
-              <p class="project-card__text">A nature-based mindfulness course in the hills by Häckebergasjön: reconnecting with nature, animals and each other.</p>
-              <ul class="tags" role="list"><li>Mindfulness</li><li>Nature</li><li>Course</li></ul>
+              <p class="project-card__domain">Medtech · Computer vision</p>
+              <h3 class="project-card__title">Blood cell segmentation</h3>
+              <p class="project-card__text">Imaging algorithms and generative models for ML-based digital microscopes: segmenting and classifying red and white blood cells in large image sets.</p>
+              <ul class="tags" role="list"><li>PyTorch</li><li>GANs</li><li>OpenCV</li></ul>
             </article>
           </li>
           <li class="carousel__item project">
             <article class="project-card">
-              <p class="project-card__domain">Automotive · Imaging</p>
-              <h3 class="project-card__title">Image sensors for cars</h3>
-              <p class="project-card__text">Project leadership in an automotive image-sensor programme: clear priorities, direct communication, no loose ends.</p>
-              <ul class="tags" role="list"><li>Project management</li><li>Automotive</li></ul>
+              <p class="project-card__domain">Automotive · Platforms</p>
+              <h3 class="project-card__title">Camera SDK for self-driving</h3>
+              <p class="project-card__text">Product owner and technical lead for camera-module SDK releases on NVIDIA Drive, NVIDIA Jetson Orin and TI TDA4, with stakeholders in Japan.</p>
+              <ul class="tags" role="list"><li>Product owner</li><li>NVIDIA Jetson</li><li>GitLab CI/CD</li></ul>
             </article>
           </li>
           <li class="carousel__item project">
             <article class="project-card">
-              <p class="project-card__domain">Computer vision · 3D</p>
-              <h3 class="project-card__title">Volume from a phone</h3>
-              <p class="project-card__text">Structure-from-motion fused with inertial sensors to estimate the volume of stone and gravel piles from one phone video.</p>
-              <ul class="tags" role="list"><li>SfM</li><li>Sensor fusion</li><li>Mobile</li></ul>
+              <p class="project-card__domain">Data · ETL</p>
+              <h3 class="project-card__title">Data pipelines at scale</h3>
+              <p class="project-card__text">ETL and OLAP pipelines in Databricks and PySpark that turn scattered source data into clean, queryable models for analytics and AI.</p>
+              <ul class="tags" role="list"><li>PySpark</li><li>SQL</li><li>ETL / OLAP</li></ul>
+            </article>
+          </li>
+          <li class="carousel__item project">
+            <article class="project-card">
+              <p class="project-card__domain">Medtech · Machine learning</p>
+              <h3 class="project-card__title">Wound severity from photos</h3>
+              <p class="project-card__text">A proof of concept that scores wound severity from medical images with a regression model, from labelling to trained model.</p>
+              <ul class="tags" role="list"><li>Azure ML Studio</li><li>Label Studio</li><li>Python</li></ul>
+            </article>
+          </li>
+          <li class="carousel__item project">
+            <article class="project-card">
+              <p class="project-card__domain">Security cameras · R&amp;D</p>
+              <h3 class="project-card__title">Thermal &amp; dome camera imaging</h3>
+              <p class="project-card__text">Owned image quality across the imaging pipeline (sensor, optics, firmware, video) and led thermal-camera R&amp;D as Scrum Master for three teams.</p>
+              <ul class="tags" role="list"><li>C++</li><li>Python</li><li>Image quality</li></ul>
+            </article>
+          </li>
+          <li class="carousel__item project">
+            <article class="project-card">
+              <p class="project-card__domain">Agentic AI · Web</p>
+              <h3 class="project-card__title">AI document extraction app</h3>
+              <p class="project-card__text">A C# web app, built agentically, that extracts structured data from documents with Azure Content Understanding, plus a Teams chatbot.</p>
+              <ul class="tags" role="list"><li>C#</li><li>AI Foundry</li><li>Teams bot</li></ul>
             </article>
           </li>
           <li class="carousel__item project">
             <article class="project-card">
               <p class="project-card__domain">Automotive · Active safety</p>
-              <h3 class="project-card__title">Emergency lane keeping</h3>
-              <p class="project-card__text">A blind-spot-zone extension of emergency lane-keeping assist, from concept to an award-winning function.</p>
-              <ul class="tags" role="list"><li>Active safety</li><li>ADAS</li></ul>
+              <h3 class="project-card__title">Collision avoidance</h3>
+              <p class="project-card__text">Verification lead for lane keeping and rear radar functions under ISO 26262, as team lead and SAFe Scrum Master. Award-winning work.</p>
+              <ul class="tags" role="list"><li>ISO 26262</li><li>ADAS</li><li>Matlab</li></ul>
             </article>
           </li>
         </ul>
@@ -386,6 +409,10 @@
               <li>Swedish-language store</li>
               <li>Built with agentic AI</li>
             </ul>
+            <blockquote class="quote feature__quote">
+              <p>“Super attentive to all of our requests, speedily delivering everything we needed. Highly recommend!”</p>
+              <footer>Dave, Den anspråkslösa Cigarraffären</footer>
+            </blockquote>
             <p class="feature__link">
               <a class="link-arrow" href="https://www.gotteftermaten.se" target="_blank" rel="noopener">Visit gotteftermaten.se <span aria-hidden="true">↗</span></a>
             </p>
@@ -414,13 +441,14 @@
           <p class="label">05 — About</p>
           <h2 class="section-title" id="about-title">Hi, I’m Marcus.</h2>
           <p class="section-lead">I founded Equanimity Engineering in 2024 to do the work I like best: helping teams see a hard problem clearly, then building their way through it, calmly.</p>
-          <p>My background spans automotive, imaging and medtech: active-safety functions, image sensors, computational microscopy and 3D computer vision. I lead with direct communication and a habit of pulling on loose ends until they’re tied, and I teach what I build so it stays with your team.</p>
-          <p>Away from the keyboard I’ve served at a Vipassana meditation centre, mentored teenagers in Malmö, and run a mindfulness course with a flock of sheep.</p>
+          <p>Ten years in, my work has moved from cameras and cars to AI. Today I build agentic AI and LLM solutions, ML and computer vision models, and the data pipelines that feed them, mostly for healthcare and medtech. Before that: camera R&amp;D and image quality, an automotive camera SDK on NVIDIA platforms, and collision-avoidance verification in cars.</p>
+          <p>I lead with direct communication and a habit of pulling on loose ends until they’re tied, and I teach what I build so it stays with your team. Away from the keyboard: Vipassana, a year studying in Seoul, mentoring teenagers in Malmö, and a mindfulness course with a flock of sheep.</p>
 
           <dl class="facts">
             <div><dt>Based in</dt><dd>Malmö, the Øresund region, and remote</dd></div>
-            <div><dt>Focus</dt><dd>Computer vision, machine learning, AI training, programme leadership</dd></div>
-            <div><dt>Methods</dt><dd>Scrum, SAFe, product ownership, MLOps</dd></div>
+            <div><dt>Focus</dt><dd>Agentic AI &amp; LLMs, machine learning, computer vision, data pipelines, AI training</dd></div>
+            <div><dt>Stack</dt><dd>Python, C#, C++, PyTorch, OpenCV, Databricks, PySpark, SQL, Azure AI Foundry, ML Studio &amp; AI Search</dd></div>
+            <div><dt>Methods</dt><dd>Product ownership, Scrum, SAFe, ISO 26262, MLOps</dd></div>
             <div><dt>Languages</dt><dd>Swedish, English, basic Korean</dd></div>
             <div><dt>Education</dt><dd>MSc, Linköping University · Sogang University, Seoul</dd></div>
           </dl>
