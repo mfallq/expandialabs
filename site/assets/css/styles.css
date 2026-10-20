@@ -1082,6 +1082,11 @@ button { font: inherit; color: inherit; }
   gap: 12px;
   margin-top: clamp(40px, 5vw, 56px);
 }
+.contact__reach {
+  margin-top: 28px;
+  max-width: 44em;
+  color: var(--linen);
+}
 .contact__address {
   margin-top: 28px;
   font-size: var(--fs-small);

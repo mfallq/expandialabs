@@ -3,17 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Expandia Labs | Equanimity Engineering AB</title>
-  <meta name="description" content="Equanimity Engineering AB (Expandia Labs), Malmö: AI and machine learning consultancy. Agentic AI, LLMs and RAG, computer vision, ML models and data pipelines, plus AI training for teams.">
+  <title>AI &amp; Machine Learning Consultant in Europe | Equanimity Engineering (Expandia Labs)</title>
+  <meta name="description" content="Freelance AI and machine learning consultant for companies across the EU. Agentic AI, LLMs and RAG, computer vision, ML models and data pipelines (Databricks, Azure), from proof of concept to production. Remote, or on-site in Malmö and Copenhagen.">
   <meta name="theme-color" content="#0e1f33">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Marcus Fallqvist">
   <link rel="canonical" href="https://www.expandialabs.com/">
+  <link rel="alternate" hreflang="en" href="https://www.expandialabs.com/">
+  <link rel="alternate" hreflang="x-default" href="https://www.expandialabs.com/">
 
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
   <meta property="og:url" content="https://www.expandialabs.com/">
   <meta property="og:site_name" content="Expandia Labs">
-  <meta property="og:title" content="Expandia Labs: See clearly. Go further. Stay level.">
-  <meta property="og:description" content="AI and machine learning consultancy in Malmö: agentic AI, computer vision, ML models and data pipelines."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="AI &amp; machine learning consultant for EU companies | Expandia Labs">
+  <meta property="og:description" content="Agentic AI, computer vision, ML models and data pipelines, from proof of concept to production. Remote across the EU.">
   <meta property="og:image" content="https://www.expandialabs.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Equanimity Engineering: See clearly. Go further. Stay level. Agentic AI, machine learning, computer vision, data pipelines.">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/brand/favicon-32.svg" type="image/svg+xml">
   <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
@@ -21,37 +30,77 @@
 
   <!-- Inter is self-hosted: no third-party requests (GDPR) -->
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261020c">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261020d">
 
-  <script>
-    document.documentElement.classList.add('js');
-    try { if (localStorage.getItem('motion') === 'paused') document.documentElement.classList.add('motion-paused'); } catch (e) {}
-  </script>
-  <script src="assets/js/main.js?v=20261020c" defer></script>
+  <!-- Tiny, blocking on purpose: sets .js and the saved motion preference before first paint -->
+  <script src="assets/js/early.js?v=20261020d"></script>
+  <script src="assets/js/main.js?v=20261020d" defer></script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Equanimity Engineering AB",
-    "alternateName": "Expandia Labs",
-    "url": "https://www.expandialabs.com/",
-    "logo": "https://www.expandialabs.com/assets/brand/app-icon-1024.png",
-    "slogan": "See clearly. Stay level.",
-    "foundingDate": "2024",
-    "founder": { "@type": "Person", "name": "Marcus Fallqvist", "sameAs": "https://www.linkedin.com/in/mfallq/" },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Västra Kanalgatan 5",
-      "postalCode": "211 41",
-      "addressLocality": "Malmö",
-      "addressCountry": "SE"
-    },
-    "areaServed": ["SE", "DK"],
-    "knowsAbout": ["Agentic AI", "Large language models", "Retrieval-augmented generation", "Machine learning", "Computer vision", "Data pipelines", "Databricks", "Azure AI", "AI training", "Product ownership"],
-    "email": "Marcus@expandialabs.com",
-    "identifier": { "@type": "PropertyValue", "propertyID": "Organisationsnummer", "value": "559467-0068" },
-    "sameAs": ["https://www.linkedin.com/company/equanimity-engineering/"]
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.expandialabs.com/#company",
+        "name": "Equanimity Engineering AB",
+        "alternateName": "Expandia Labs",
+        "description": "AI and machine learning consultancy serving companies across the European Union: agentic AI, LLMs and RAG, computer vision, ML models and data pipelines, plus AI training for teams.",
+        "url": "https://www.expandialabs.com/",
+        "logo": "https://www.expandialabs.com/assets/brand/app-icon-1024.png",
+        "image": "https://www.expandialabs.com/assets/og-image.png",
+        "slogan": "See clearly. Stay level.",
+        "foundingDate": "2024",
+        "email": "Marcus@expandialabs.com",
+        "identifier": { "@type": "PropertyValue", "propertyID": "Organisationsnummer", "value": "559467-0068" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Västra Kanalgatan 5",
+          "postalCode": "211 41",
+          "addressLocality": "Malmö",
+          "addressCountry": "SE"
+        },
+        "areaServed": [
+          { "@type": "Place", "name": "European Union" },
+          { "@type": "Country", "name": "Sweden" },
+          { "@type": "Country", "name": "Denmark" },
+          { "@type": "Country", "name": "Germany" },
+          { "@type": "Country", "name": "Netherlands" },
+          { "@type": "Country", "name": "Finland" }
+        ],
+        "availableLanguage": ["English", "Swedish"],
+        "knowsAbout": ["Agentic AI", "Large language models", "Retrieval-augmented generation", "Model Context Protocol", "Machine learning", "Computer vision", "Medical image analysis", "Data pipelines", "ETL", "Databricks", "PySpark", "Microsoft Azure AI Foundry", "Azure Machine Learning", "PyTorch", "AI training"],
+        "founder": { "@id": "https://www.expandialabs.com/#marcus" },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "AI and machine learning services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Agentic AI and LLM solutions", "description": "Agents, RAG, knowledge bases and MCP integrations on Azure AI." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Machine learning and computer vision", "description": "Models from proof of concept to production, including medical imaging." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data pipelines", "description": "ETL and analytics pipelines in Databricks, PySpark and SQL." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI training for teams", "description": "Hands-on workshops on using AI and modern tools responsibly." } }
+          ]
+        },
+        "sameAs": ["https://www.linkedin.com/company/equanimity-engineering/"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.expandialabs.com/#marcus",
+        "name": "Marcus Fallqvist",
+        "jobTitle": "AI and machine learning consultant, founder",
+        "worksFor": { "@id": "https://www.expandialabs.com/#company" },
+        "alumniOf": "Linköping University",
+        "sameAs": ["https://www.linkedin.com/in/mfallq/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.expandialabs.com/#website",
+        "url": "https://www.expandialabs.com/",
+        "name": "Expandia Labs",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://www.expandialabs.com/#company" }
+      }
+    ]
   }
   </script>
 </head>
@@ -94,7 +143,7 @@
             <span class="hero__line">Go further.</span>
             <span class="hero__line hero__line--accent">Stay level.</span>
           </h1>
-          <p class="hero__lead">An AI and machine learning consultancy. We build agentic AI, ML and computer vision models, and the data pipelines underneath them, from first proof of concept to production. Calm leadership, clear sight of the work, engineering you can measure.</p>
+          <p class="hero__lead">An AI and machine learning consultancy for companies across the EU. We build agentic AI, ML and computer vision models, and the data pipelines underneath them, from first proof of concept to production. Calm leadership, clear sight of the work, engineering you can measure.</p>
           <div class="hero__actions">
             <a class="button button--brass" href="#contact">Start a conversation</a>
             <a class="button button--ghost" href="#projects">See selected work</a>
@@ -268,7 +317,7 @@
         </ul>
       </div>
 
-      <p class="container section-note">Healthcare, medtech, automotive, camera technology and retail, from global groups to a local shop.</p>
+      <p class="container section-note">Healthcare, medtech, automotive, camera technology and retail, from global groups to a local shop. Today working with clients across the EU.</p>
     </section>
 
     <!-- ============ 03 Projects ============ -->
@@ -494,6 +543,7 @@
           <a class="button button--ghost button--large" href="https://www.linkedin.com/in/mfallq/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
 
+        <p class="contact__reach">Working remotely with companies across the EU, in English or Swedish. On-site in Malmö, Copenhagen and the Øresund region; elsewhere in Europe by arrangement.</p>
         <address class="contact__address">Equanimity Engineering AB · Västra Kanalgatan 5 · 211 41 Malmö · Sweden</address>
       </div>
     </section>

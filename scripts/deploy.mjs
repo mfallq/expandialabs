@@ -59,7 +59,11 @@ try {
     if (!res.ok) fail(`could not list "${path}": ${res.err}`);
     console.log(`Remote listing of /${path}:\n${res.out}`);
   } else {
-    const files = walk(SITE).map((full) => ({ full, rel: relative(SITE, full).split(sep).join('/'), size: statSync(full).size }));
+    const only = args.includes('--file') ? args[args.indexOf('--file') + 1] : null; // e.g. --file .htaccess
+    const files = walk(SITE)
+      .map((full) => ({ full, rel: relative(SITE, full).split(sep).join('/'), size: statSync(full).size }))
+      .filter((f) => !only || f.rel === only);
+    if (only && !files.length) fail(`no such file in site/: ${only}`);
     const total = files.reduce((sum, f) => sum + f.size, 0);
     console.log(`${files.length} files, ${(total / 1024).toFixed(0)} KB -> ftps://${FTP_HOST}/${remoteDir}/`);
 
