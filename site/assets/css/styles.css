@@ -467,7 +467,7 @@ button { font: inherit; color: inherit; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 22px clamp(28px, 3.4vw, 48px);
+  gap: 22px clamp(24px, 2.4vw, 36px);
   margin: 0;
   padding: 0;
 }
@@ -500,7 +500,16 @@ button { font: inherit; color: inherit; }
 }
 
 /* ---------- Case studies ---------- */
-.cases__title { margin-top: 0; margin-bottom: clamp(28px, 4vw, 48px); }
+/* Heading kept for screen readers and search engines, not shown */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 /* Without JS every case is listed; the tab bar only appears with JS */
 .cases__bar { display: none; }
@@ -617,6 +626,7 @@ button { font: inherit; color: inherit; }
   color: var(--on-dark);
 }
 .cases.is-ready .case { margin-top: clamp(16px, 2vw, 24px); }
+.case[hidden] { display: none; } /* display: grid above would otherwise override hidden */
 .case.is-entering { animation: case-in 0.6s var(--ease) both; }
 @keyframes case-in { from { opacity: 0; transform: translateY(10px); } }
 
