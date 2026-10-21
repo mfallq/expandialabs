@@ -617,9 +617,7 @@ button { font: inherit; color: inherit; }
 /* The case itself: a midnight card with the story left and the numbers right */
 .case {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: clamp(28px, 5vw, 72px);
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
   padding: clamp(28px, 4.5vw, 56px);
   border-radius: var(--radius-lg);
   background: var(--midnight);
@@ -663,32 +661,6 @@ button { font: inherit; color: inherit; }
   color: var(--on-dark-muted);
 }
 
-.case__stats {
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--rule-dark);
-}
-.case__stats li {
-  display: grid;
-  grid-template-columns: 6.5rem minmax(0, 1fr);
-  align-items: baseline;
-  gap: 16px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--rule-dark);
-}
-.case__stats strong {
-  font-size: clamp(2rem, 1.5rem + 1.6vw, 2.75rem);
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  white-space: nowrap;
-  color: var(--brass);
-}
-.case__stats span { font-size: var(--fs-small); line-height: 1.45; color: var(--on-dark-muted); }
-
-@media (max-width: 900px) {
-  .case { grid-template-columns: 1fr; }
-}
 @media (max-width: 720px) {
   .cases.is-ready .cases__bar { flex-direction: column; }
   .case-tab { height: 76px; padding: 0 10px; border-radius: var(--radius); }
@@ -697,7 +669,6 @@ button { font: inherit; color: inherit; }
   .case-tab__logo img { width: 100%; height: auto; max-height: calc(var(--h, 36px) * 0.6); object-fit: contain; }
   .case-tab__progress { left: 12px; right: 12px; bottom: 10px; }
   .cases__pause { align-self: flex-end; min-height: 44px; border-radius: 999px; }
-  .case__stats li { grid-template-columns: 5.5rem minmax(0, 1fr); }
 }
 
 /* ---------- Contact ---------- */
