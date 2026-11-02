@@ -130,7 +130,6 @@ button { font: inherit; color: inherit; }
 }
 
 /* ---------- Type helpers ---------- */
-.label,
 .eyebrow {
   font-size: var(--fs-label);
   font-weight: 500;
@@ -139,11 +138,10 @@ button { font: inherit; color: inherit; }
   text-transform: uppercase;
   color: var(--brass-ink);
 }
-.section--midnight .label,
 .hero .eyebrow { color: var(--brass); }
 
 .section-title {
-  margin-top: 14px;
+  margin-top: 0;
   font-size: var(--fs-h2);
   font-weight: 500;
   line-height: 1.06;
@@ -385,7 +383,6 @@ button { font: inherit; color: inherit; }
 }
 
 .hero__title {
-  margin-top: 22px;
   font-size: var(--fs-hero);
   font-weight: 500;
   line-height: 1.04;
@@ -407,16 +404,8 @@ button { font: inherit; color: inherit; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 
 /* Services, where the eye used to be */
-.hero__services-label,
-.hero__clients-label {
-  font-size: var(--fs-label);
-  font-weight: 500;
-  letter-spacing: var(--track-label);
-  text-transform: uppercase;
-  color: var(--brass);
-}
 .services {
-  margin: 14px 0 0;
+  margin: 0;
   padding: 0;
   border-top: 1px solid var(--rule-dark);
 }
@@ -460,7 +449,6 @@ button { font: inherit; color: inherit; }
   padding-top: 24px;
   border-top: 1px solid var(--rule-dark);
 }
-.hero__clients-label { color: var(--on-dark-muted); }
 .logos {
   display: flex;
   flex: 1;
