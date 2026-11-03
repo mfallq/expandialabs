@@ -30,11 +30,11 @@
 
   <!-- Inter is self-hosted: no third-party requests (GDPR) -->
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261103a">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261103b">
 
   <!-- Tiny, blocking on purpose: sets .js and the saved motion preference before first paint -->
-  <script src="assets/js/early.js?v=20261021c"></script>
-  <script src="assets/js/main.js?v=20261021c" defer></script>
+  <script src="assets/js/early.js?v=20261103b"></script>
+  <script src="assets/js/main.js?v=20261103b" defer></script>
 
   <script type="application/ld+json">
   {
@@ -105,7 +105,7 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link button-sm" href="#main">Skip to content</a>
 
   <!-- ============ Header ============ -->
   <header class="site-header" data-header>
@@ -116,12 +116,12 @@
       </a>
       <nav class="site-nav" aria-label="Main">
         <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list" data-nav-toggle>
-          <span>Menu</span>
+          <span class="title-4">Menu</span>
           <span class="site-nav__toggle-icon" aria-hidden="true"></span>
         </button>
         <ul class="site-nav__list" id="site-nav-list" data-nav-list>
-          <li><a href="#cases">Case studies</a></li>
-          <li><a class="button button--small" href="#contact">Let’s talk</a></li>
+          <li><a class="title-4" href="#cases">Case studies</a></li>
+          <li><a class="button button--small button-sm" href="#contact">Let’s talk</a></li>
         </ul>
       </nav>
     </div>
@@ -139,15 +139,15 @@
 
       <div class="container hero__inner">
         <div class="hero__copy">
-          <h1 class="hero__title" id="hero-title">We help companies across Europe turn AI and data into <span class="hero__accent">measurable results.</span></h1>
+          <h1 class="hero__title heading-1" id="hero-title">We help companies across Europe turn AI and data into <span class="hero__accent">measurable results</span></h1>
         </div>
 
         <div class="hero__services">
           <ul class="services" role="list">
-            <li><span class="services__name">Agentic AI &amp; LLMs</span><span class="services__hint">RAG · MCP · Azure AI</span></li>
-            <li><span class="services__name">Machine learning</span><span class="services__hint">PyTorch · Azure ML</span></li>
-            <li><span class="services__name">Computer vision</span><span class="services__hint">Medical &amp; camera imaging</span></li>
-            <li><span class="services__name">Data pipelines</span><span class="services__hint">Databricks · PySpark · SQL</span></li>
+            <li><span class="services__name heading-5">Agentic AI &amp; LLMs</span><span class="services__hint caption-5">RAG · MCP · Azure AI</span></li>
+            <li><span class="services__name heading-5">Machine learning</span><span class="services__hint caption-5">PyTorch · Azure ML</span></li>
+            <li><span class="services__name heading-5">Computer vision</span><span class="services__hint caption-5">Medical &amp; camera imaging</span></li>
+            <li><span class="services__name heading-5">Data pipelines</span><span class="services__hint caption-5">Databricks · PySpark · SQL</span></li>
           </ul>
         </div>
       </div>
@@ -160,7 +160,7 @@
           <li class="logos__item" style="--h: 22px"><img src="assets/clients/onemed.png" width="344" height="74" alt="OneMed"></li>
           <li class="logos__item" style="--h: 40px"><img src="assets/clients/axis-communications.svg" width="300" height="108" alt="Axis Communications"></li>
           <li class="logos__item" style="--h: 14px"><img src="assets/clients/cellavision.png" width="965" height="98" alt="CellaVision"></li>
-          <li class="logos__item logos__item--shop" style="--h: 38px"><img src="assets/clients/den-ansprakslosa-cigarraffaren.png" width="512" height="512" alt=""><span>Den anspråkslösa<br>Cigarraffären</span></li>
+          <li class="logos__item logos__item--shop" style="--h: 38px"><img src="assets/clients/den-ansprakslosa-cigarraffaren.png" width="512" height="512" alt=""><span class="caption-3">Den anspråkslösa<br>Cigarraffären</span></li>
         </ul>
       </div>
     </section>
@@ -197,7 +197,7 @@
                 <span class="case-tab__progress" aria-hidden="true"></span>
               </button>
             </div>
-            <button class="cases__pause" type="button" data-cases-pause>
+            <button class="cases__pause button-sm" type="button" data-cases-pause>
               <span class="cases__pause-icon" aria-hidden="true"></span>
               <span data-cases-pause-label>Pause</span>
             </button>
@@ -205,31 +205,39 @@
 
           <article class="case" role="tabpanel" id="case-asker" aria-labelledby="tab-asker">
             <div class="case__story">
-              <p class="case__meta">Asker Healthcare Group · Data scientist · 2025–today</p>
-              <h3 class="case__title">AI agents for medical product data</h3>
-              <p class="case__text">Agentic AI pipelines for medical product data, plus a C# web app that extracts data with AI.</p>
-              <ul class="tags" role="list"><li>Databricks</li><li>PySpark</li><li>Azure AI Search</li><li>RAG</li><li>MCP</li><li>C#</li></ul>
+              <p class="case__meta caption-1">Asker Healthcare Group · Data scientist · 2025–today</p>
+              <h3 class="case__title heading-3">AI agents for medical product data</h3>
+              <p class="case__text body-3">Agentic AI pipelines for medical product data, plus a C# web app that extracts data with AI.</p>
+              <ul class="tags caption-5" role="list"><li>Databricks</li><li>PySpark</li><li>Azure AI Search</li><li>RAG</li><li>MCP</li><li>C#</li></ul>
             </div>
           </article>
 
           <article class="case" role="tabpanel" id="case-sony" aria-labelledby="tab-sony">
             <div class="case__story">
-              <p class="case__meta">Sony Europe · Product owner · 2023–2024</p>
-              <h3 class="case__title">Sony’s car-camera SDK on three self-driving platforms</h3>
-              <p class="case__text">Led the release of camera-module SDK integrations and the developer portal that delivers them, working with teams in Japan.</p>
-              <ul class="tags" role="list"><li>NVIDIA Drive</li><li>Jetson Orin</li><li>TI TDA4</li><li>GitLab CI/CD</li><li>AsciiDoc</li></ul>
+              <p class="case__meta caption-1">Sony Europe · Product owner · 2023–2024</p>
+              <h3 class="case__title heading-3">Sony’s car camera SDK on three autonomous driving platforms</h3>
+              <p class="case__text body-3">Led the release of SDK integrations for Sony’s camera modules and the developer portal that delivers them, working with teams in Japan.</p>
+              <ul class="tags caption-5" role="list"><li>NVIDIA Drive</li><li>Jetson Orin</li><li>TI TDA4</li><li>GitLab CI/CD</li><li>AsciiDoc</li></ul>
             </div>
           </article>
 
           <article class="case" role="tabpanel" id="case-cellavision" aria-labelledby="tab-cellavision">
             <div class="case__story">
-              <p class="case__meta">CellaVision · ML engineer · 2024–2025</p>
-              <h3 class="case__title">Teaching a new microscope to see blood cells</h3>
-              <p class="case__text">Imaging algorithms and generative models for a Fourier ptychographic microscope, segmenting blood cells in large image sets.</p>
-              <ul class="tags" role="list"><li>PyTorch</li><li>GANs</li><li>OpenCV</li><li>Python</li></ul>
+              <p class="case__meta caption-1">CellaVision · ML engineer · 2024–2025</p>
+              <h3 class="case__title heading-3">Teaching a new microscope to see blood cells</h3>
+              <p class="case__text body-3">Imaging algorithms and generative models for a Fourier ptychographic microscope, segmenting blood cells in large image sets.</p>
+              <ul class="tags caption-5" role="list"><li>PyTorch</li><li>GANs</li><li>OpenCV</li><li>Python</li></ul>
             </div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ Tagline ============
+         The core benefit in large type; words light up as it scrolls in. -->
+    <section class="tagline section--linen-2" aria-label="What we do">
+      <div class="container">
+        <p class="tagline__text heading-1" data-tagline>From proof of concept<br>to a model your team<br>runs every day</p>
       </div>
     </section>
 
@@ -243,31 +251,31 @@
 
       <div class="container contact">
         <div class="reveal">
-          <h2 class="section-title section-title--xl" id="contact-title">What’s your biggest pain point today?</h2>
-          <p class="section-lead">Tell us which task eats your week. You’ll get a calm, honest answer on whether AI, ML or better data can help.</p>
+          <h2 class="heading-2" id="contact-title">What’s your biggest pain point today?</h2>
+          <p class="section-lead body-7">Tell us which task eats your week. You’ll get a calm, honest answer on whether AI, ML or better data can help.</p>
         </div>
 
         <ol class="steps" role="list">
-          <li class="reveal" style="--d: 0"><h3>Talk</h3><p>Thirty minutes, no slides.</p></li>
-          <li class="reveal" style="--d: 1"><h3>Map</h3><p>A one-page plan: options, effort, risks.</p></li>
-          <li class="reveal" style="--d: 2"><h3>Deliver</h3><p>Build, measure, hand over.</p></li>
+          <li class="reveal" style="--d: 0"><h3 class="heading-5">Talk</h3><p class="body-6">Thirty minutes, no slides.</p></li>
+          <li class="reveal" style="--d: 1"><h3 class="heading-5">Map</h3><p class="body-6">A plan on one page: options, effort, risks.</p></li>
+          <li class="reveal" style="--d: 2"><h3 class="heading-5">Deliver</h3><p class="body-6">Build, measure, hand over.</p></li>
         </ol>
 
         <div class="contact__actions">
-          <a class="button button--brass button--large" href="mailto:Marcus@expandialabs.com">Marcus@expandialabs.com</a>
-          <a class="button button--ghost button--large" href="https://www.linkedin.com/in/mfallq/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="button button--brass button--large button-lg" href="mailto:Marcus@expandialabs.com">Marcus@expandialabs.com</a>
+          <a class="text-link title-2" href="https://www.linkedin.com/in/mfallq/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
 
-        <p class="contact__reach">Remote across the EU, in English or Swedish. On-site in Malmö and Copenhagen.</p>
+        <p class="contact__reach body-3">Remote across the EU, in English or Swedish. In person in Malmö and Copenhagen.</p>
       </div>
     </section>
   </main>
 
   <!-- ============ Footer ============ -->
-  <footer class="site-footer">
+  <footer class="site-footer body-6">
     <div class="container site-footer__inner">
       <img class="site-footer__logo" src="assets/brand/equanimity-horizontal-reverse.svg" width="1411" height="320" alt="Equanimity Engineering">
-      <p class="site-footer__tagline">See clearly. <span>Stay level.</span></p>
+      <p class="site-footer__tagline title-2">See clearly. <span>Stay level.</span></p>
       <div class="site-footer__bottom">
         <address class="site-footer__address">Equanimity Engineering AB · Västra Kanalgatan 5 · 211 41 Malmö · Sweden<br>Org.nr 559467-0068 · <a href="mailto:Marcus@expandialabs.com">Marcus@expandialabs.com</a></address>
         <ul class="site-footer__links" role="list">
@@ -275,7 +283,7 @@
           <li><a href="#top">Back to top ↑</a></li>
         </ul>
       </div>
-      <p class="site-footer__legal">© <span data-year>2026</span> Equanimity Engineering AB · Expandia Labs</p>
+      <p class="site-footer__legal caption-5">© <span data-year>2026</span> Equanimity Engineering AB · Expandia Labs</p>
     </div>
   </footer>
 </body>
