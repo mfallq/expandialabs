@@ -381,7 +381,7 @@ button { font: inherit; color: inherit; }
   background-clip: text;
   color: transparent;
 }
-.hero__accent { color: var(--brass); }
+.hero__accent { display: block; color: var(--brass); }
 
 /* Still used by the 404 page */
 .hero__line { display: block; }
@@ -621,14 +621,6 @@ button { font: inherit; color: inherit; }
   .cases__pause { align-self: flex-end; min-height: 44px; border-radius: 999px; }
 }
 
-/* ---------- Tagline ----------
-   The core benefit in large type. With JS each word starts muted and comes
-   up to full colour as it crosses the lower third of the screen (main.js). */
-.tagline { padding-block: clamp(80px, 12vw, 96px); }
-.tagline__text { max-width: 22ch; }
-.tagline__text .w { opacity: 0.3; transition: opacity 0.5s var(--ease); }
-.tagline__text .w.is-on { opacity: 1; }
-
 /* ---------- Contact ---------- */
 .contact { max-width: 1000px; }
 
@@ -730,7 +722,6 @@ button { font: inherit; color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
-  .tagline__text .w { opacity: 1; }
 
   /* Case studies don't play on their own: the chosen logo is simply in colour */
   .case-tab__fill { animation: none !important; }

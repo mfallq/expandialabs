@@ -128,32 +128,6 @@
     select(0);
   }
 
-  /* ---------- Tagline: words light up in reading order ----------
-     Each word is wrapped in a span that starts muted. A word comes up to
-     full colour once it crosses the lower 40% of the screen; words that
-     cross together (one line) follow each other 60 ms apart. */
-  const tagline = document.querySelector('[data-tagline]');
-
-  if (tagline && 'IntersectionObserver' in window && !reduceMotion.matches) {
-    tagline.innerHTML = tagline.innerHTML
-      .split(/(<br\s*\/?>)/)
-      .map((part) => (part.startsWith('<br') ? part
-        : part.split(/(\s+)/).map((word) => (word.trim() ? `<span class="w">${word}</span>` : word)).join('')))
-      .join('');
-    const words = Array.from(tagline.querySelectorAll('.w'));
-    const lighter = new IntersectionObserver((entries) => {
-      entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => words.indexOf(a.target) - words.indexOf(b.target))
-        .forEach((entry, i) => {
-          entry.target.style.transitionDelay = `${Math.min(i * 60, 400)}ms`;
-          entry.target.classList.add('is-on');
-          lighter.unobserve(entry.target);
-        });
-    }, { rootMargin: '0px 0px -40% 0px' });
-    words.forEach((word) => lighter.observe(word));
-  }
-
   /* ---------- Reveal on scroll ---------- */
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduceMotion.matches) {
