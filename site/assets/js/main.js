@@ -128,6 +128,88 @@
     select(0);
   }
 
+  /* ---------- Contact form ----------
+     Without JS the form posts to contact.php, which answers with a page.
+     With JS it is checked here, sent with fetch and answered inline;
+     contact.php checks everything again and has the final say. */
+  const form = document.querySelector('[data-contact-form]');
+
+  if (form && 'fetch' in window) {
+    const submit = form.querySelector('[data-submit]');
+    const status = form.querySelector('[data-status]');
+    const sent = document.querySelector('[data-sent]');
+    const submitLabel = submit.textContent;
+    const messages = {
+      name: 'Please tell us your name.',
+      email: 'Please enter an email address we can reply to, like name@company.com.',
+      message: 'Please tell us a little about what you need help with.',
+    };
+
+    const setError = (name, text) => {
+      const field = form.elements[name];
+      const slot = form.querySelector(`[data-error-for="${name}"]`);
+      if (!field || !slot) return;
+      slot.textContent = text || '';
+      field.closest('.field').classList.toggle('has-error', Boolean(text));
+      field.setAttribute('aria-invalid', String(Boolean(text)));
+    };
+
+    const check = (name) => {
+      const field = form.elements[name];
+      const ok = field.value.trim() !== '' && field.checkValidity();
+      setError(name, ok ? '' : messages[name]);
+      return ok;
+    };
+
+    // Clear a field's error as soon as it is fixed
+    Object.keys(messages).forEach((name) => {
+      form.elements[name].addEventListener('input', () => {
+        if (form.elements[name].getAttribute('aria-invalid') === 'true') check(name);
+      });
+    });
+
+    const setBusy = (busy) => {
+      submit.toggleAttribute('data-busy', busy);
+      submit.disabled = busy;
+      submit.textContent = busy ? 'Sending…' : submitLabel;
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.textContent = '';
+      status.classList.remove('is-error');
+
+      const invalid = Object.keys(messages).filter((name) => !check(name));
+      if (invalid.length) {
+        form.elements[invalid[0]].focus();
+        return;
+      }
+
+      setBusy(true);
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        const result = await response.json().catch(() => ({}));
+        if (response.ok && result.ok) {
+          form.hidden = true;
+          sent.hidden = false;
+          sent.focus();
+          return;
+        }
+        Object.entries(result.errors || {}).forEach(([name, text]) => setError(name, text));
+        status.textContent = result.message || 'Your message wasn’t sent. Please try again in a moment.';
+        status.classList.add('is-error');
+      } catch {
+        status.textContent = 'Your message wasn’t sent because the connection failed. Check your connection and try again.';
+        status.classList.add('is-error');
+      }
+      setBusy(false);
+    });
+  }
+
   /* ---------- Reveal on scroll ---------- */
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduceMotion.matches) {

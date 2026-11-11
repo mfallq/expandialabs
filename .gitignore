@@ -14,3 +14,6 @@ Thumbs.db
 desktop.ini
 .vscode/*
 !.vscode/extensions.json
+
+# Contact form recipient: deployed to the server, never committed
+site/contact.config.php
