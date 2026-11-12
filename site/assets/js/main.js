@@ -52,6 +52,30 @@
     });
   }
 
+  /* ---------- Side projects menu ----------
+     Hover opens it with a mouse (CSS). Click, tap or Enter toggles it;
+     Escape, a click outside or tabbing away closes it. */
+  document.querySelectorAll('[data-nav-menu]').forEach((menu) => {
+    const toggle = menu.querySelector('.nav-menu__toggle');
+    const setOpen = (open) => {
+      menu.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+    toggle.addEventListener('click', () => setOpen(!menu.classList.contains('is-open')));
+    menu.addEventListener('focusout', (event) => {
+      if (!menu.contains(event.relatedTarget)) setOpen(false);
+    });
+    menu.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !menu.classList.contains('is-open')) return;
+      event.stopPropagation(); // close only this menu, not the whole mobile nav
+      setOpen(false);
+      toggle.focus();
+    });
+    document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target)) setOpen(false);
+    });
+  });
+
   /* ---------- Case studies ----------
      Three logo tabs. The selected logo fills with colour over a few seconds,
      like a progress bar; when it is full, the next case opens. Clicking a

@@ -29,7 +29,7 @@ function respond(bool $ok, int $status, string $message, array $errors = []): vo
         . '<meta name="viewport" content="width=device-width, initial-scale=1">'
         . '<meta name="robots" content="noindex"><title>' . htmlspecialchars($title) . ' | Expandia Labs</title>'
         . '<link rel="icon" href="/assets/brand/favicon-32.svg" type="image/svg+xml">'
-        . '<link rel="stylesheet" href="/assets/css/styles.css?v=20261111a"></head>'
+        . '<link rel="stylesheet" href="/assets/css/styles.css?v=20261112a"></head>'
         . '<body class="section--linen-2"><main class="contact-reply"><div class="contact-card">'
         . '<h1 class="heading-5">' . htmlspecialchars($title) . '</h1>'
         . '<p class="body-3">' . htmlspecialchars($detail) . '</p>'

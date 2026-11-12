@@ -30,11 +30,11 @@
 
   <!-- Inter is self-hosted: no third-party requests (GDPR) -->
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261111a">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261112a">
 
   <!-- Tiny, blocking on purpose: sets .js and the saved motion preference before first paint -->
-  <script src="assets/js/early.js?v=20261111a"></script>
-  <script src="assets/js/main.js?v=20261111a" defer></script>
+  <script src="assets/js/early.js?v=20261112a"></script>
+  <script src="assets/js/main.js?v=20261112a" defer></script>
 
   <script type="application/ld+json">
   {
@@ -120,6 +120,15 @@
         </button>
         <ul class="site-nav__list" id="site-nav-list" data-nav-list>
           <li><a class="title-4" href="#cases">Case studies</a></li>
+          <li class="nav-menu" data-nav-menu>
+            <button class="nav-menu__toggle title-4" type="button" aria-expanded="false" aria-controls="nav-side-projects">
+              Side projects <span class="nav-menu__chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="nav-menu__panel" id="nav-side-projects" role="list">
+              <li><a href="/himmelska-himalaya/"><span class="title-4">Annapurna Circuit Trek</span><span class="caption-5">expandialabs.com/himmelska-himalaya</span></a></li>
+              <li><a href="https://gotteftermaten.se/" target="_blank" rel="noopener"><span class="title-4">Cigar Website and E-shop</span><span class="caption-5">gotteftermaten.se <span aria-hidden="true">↗</span></span></a></li>
+            </ul>
+          </li>
           <li><a class="button button--small button-sm" href="#contact">Let’s talk</a></li>
         </ul>
       </nav>
